@@ -105,7 +105,7 @@
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './home';
 import Products from './products';
@@ -113,12 +113,17 @@ import Header from './header';
 import ProductDetails from './products/productdetails';
 
 function App() {
+  const [isLoggedIn , setIsLoggedIn]=useState(false)
+  const handleLogin =() => {
+    setIsLoggedIn(!isLoggedIn)
+  };
+  
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header isLoggedIn={isLoggedIn}  onLogin={handleLogin} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={ isLoggedIn ? <products/> : <Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="*" element={<h1 style={{textAlign:'center', color:'red'}}>404 element not found</h1>}/>

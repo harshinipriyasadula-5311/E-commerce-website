@@ -28,7 +28,6 @@ function ProductDetails() {
           {productDetails.images.map((smallimage, i) => (
             <div
               onClick={() => {
-                // Fix the typo here: setProductDetails instead of setProductDetailsCopy
                 setProductDetails((prevDetails) => ({
                   ...prevDetails,
                   thumbnail: smallimage,
