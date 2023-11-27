@@ -1,50 +1,51 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import './products.css';
-// import { useNavigate } from 'react-router-dom';
-// import ProductDetails from './productdetail'; 
-// function Products() {
-//   let navigate = useNavigate();
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './products.css';
+import { useNavigate } from 'react-router-dom';
+import ProductDetails from './productdetails'; 
 
-//   const [products, setProducts] = useState([]);
+function Products() {
+  let navigate = useNavigate();
 
-//   useEffect(() => {
-//     axios.get('https://dummyjson.com/products').then((res) => {
-//       setProducts(res.data.products);
-//     });
-//   }, []);
+  const [products, setProducts] = useState([]);
 
-//   return (
-//     <>
-//       <h1 style={{ textAlign: 'center' }}>Products component</h1>
-//       <div id="product-wrapper">
-//         {products.map((product, i) => {
-//           return (
-//             <div
-//               className="product-card"
-//               onClick={() => {
-//                 navigate(`/products/${product.id}`); // Added a forward slash
-//               }}
-//               key={i}
-//             >
-//               <img className="product-thumbnail" src={product.thumbnail} alt={`Product ${i}`} />
-//               <p>
-//                 <b>Title:</b>
-//                 {product.title}
-//               </p>
-//               <p>
-//                 <b>Price:</b> {product.price}
-//               </p>
-//               <p>
-//                 <b>Rating:</b>
-//                 {product.rating}
-//               </p>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </>
-//   );
-// }
+  useEffect(() => {
+    axios.get('https://dummyjson.com/products').then((res) => {
+      setProducts(res.data.products);
+    });
+  }, []);
 
-// export default Products;
+  return (
+    <>
+      <h1 style={{ textAlign: 'center' }}>Products component</h1>
+      <div id="product-wrapper">
+        {products.map((product, i) => {
+          return (
+            <div
+              className="product-card"
+              onClick={() => {
+                navigate(`/products/${product.id}`); // Added a forward slash
+              }}
+              key={i}
+            >
+              <img className="product-thumbnail" src={product.thumbnail} alt={`Product ${i}`} />
+              <p>
+                <b>Title:</b>
+                {product.title}
+              </p>
+              <p>
+                <b>Price:</b> {product.price}
+              </p>
+              <p>
+                <b>Rating:</b>
+                {product.rating}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+export default Products;
