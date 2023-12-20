@@ -1,17 +1,24 @@
+body{
+    background-color:whitesmoke;
+}
 #product-wrapper {
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-wrap: wrap; 
-    margin: 20px auto;
-    border: 1px solid black;
+    margin: 10px auto;
+    background-color:aliceblue;
+   
 }
 
 .product-card {
     width: calc(25% - 32px); 
-    border: 1px solid navy;
+    /* border: 2px solid black; */
     text-align: center;
     font-family: cursive;
+    background-color: white;
+    box-shadow: 2px 3px 2px gray;
     margin: 15px;
+    transition: 0.5s;
 }
 #load{
     text-align: center;
@@ -23,12 +30,14 @@
 
 .product-card:hover{
     cursor: pointer;
+    transform: translatey(-15px);
 }
 #product-spec-wrapper{
     width:60%;
     margin:0px auto;
     border:2px solid black;
-    height:7 00px;
+    height:100%;
+   background-color:snow;
     text-align: center;
     padding:20px;
     justify-content: space-around;
@@ -53,4 +62,58 @@
 .small-image-thumbnail{
     width:100%;
     height: 100%;
+}
+.section-top{
+    width:100%;
+    height: 450px;
+    overflow: hidden;
+    position:relative;
+    background-image: url("https://mir-s3-cdn-cf.behance.net/projects/404/d79853118883485.Y3JvcCw5NDYsNzQwLDc3LDA.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 30px 0px 0px 0px ;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    animation:change 30s infinite ease-in-out;
+
+}
+
+@keyframes change {
+    0%{
+        background-image: url("https://media.istockphoto.com/id/1438448879/vector/christmas-sale-50.jpg?s=612x612&w=0&k=20&c=nHxg-wtTxbaoy8h9ayzdn63UsODCsP3A-azp6-4FE3k=");
+    }
+    10%{
+        background-image: url("https://img.freepik.com/premium-psd/shoes-facebook-cover-web-banner-template_220159-156.jpg");
+    }
+    20%{
+        background-image: url("https://www.beyoung.in/api/catalog/homepage-5-dec/combo-section-mobile-view.jpg");
+    }
+    30%{
+        background-image: url("https://img.freepik.com/premium-psd/cosmetics-beauty-products-social-media-facebook-instagram-post-banner-design-premium-psd_456977-263.jpg");
+    } 
+    40%{
+        background-image: url("https://pbs.twimg.com/media/EvIkHOMXcAUCmFy.jpg");
+    }
+    50%{
+        background-image: url("https://www.naturalizer.com.au/media/wysiwyg/Naturalizer_Spring-Sale_Category-Banner_Mobile_copy.jpg");
+    }
+
+    60%{
+        background-image: url("https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T2/images/G/31/img22/Laptops/Revamp/D54261251_IN_PC_Laptops_PageRevamp_BAU_HEDDER_1242x450.jpg");
+    }
+    70%{
+        background-image: url("https://cdn.grabon.in/gograbon/images/web-images/uploads/1618548389296/laptop-coupons.jpg");
+    }
+    80%{
+        background-image: url("https://i.pinimg.com/736x/34/f2/6e/34f26ed6539adde9aefcba6d0dc37b29.jpg");
+    }
+    90%{
+        background-image: url("https://www.shutterstock.com/image-vector/winter-sale-banner-paper-cut-260nw-1531278035.jpg");
+    }
+    100%{
+        background-image: url("https://pixiesmediapull-145ca.kxcdn.com/pub/media/mCaffeine_at_20__off_only_at_Pixies.in_Banner.jpeg");
+    }
 }

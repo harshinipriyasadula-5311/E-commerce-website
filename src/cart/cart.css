@@ -1,0 +1,22 @@
+.div-cont{
+    text-align: center;
+    /* padding: 10px; */
+    background-color: orange;
+    height: 30px;
+    position: sticky;
+    top:60px;
+    padding: 10px;
+}
+.back{
+    margin: 30px auto;
+}
+.back-btn{
+    border: 3px solid orange;
+}
+.back-btn:hover{
+    background-color: orange;
+}
+.cart-head1{
+    margin: 50px auto;
+
+}
