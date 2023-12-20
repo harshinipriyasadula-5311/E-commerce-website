@@ -25,7 +25,6 @@ function Header({ isLoggedIn, onLogin, cart }) {
           </>
         )}
         <Link to="/login"><button id="head-btn" style={{borderRadius: "20px"}} onClick={onLogin}>{isLoggedIn ? "Logout" : "Login"}</button></Link>
-       {/* <button id="head-btn" style={{borderRadius: "20px"}} onClick={onLogin}>{isLoggedIn ? "Logout" : "Login"}</button> */}
 
       </div>
     </>  
