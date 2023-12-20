@@ -53,7 +53,7 @@ function Login() {
         </div>
         <div>
                 <>
-                 <Link to="/signup" ><button className='btn-log'>Login</button></Link>
+                 <Link to="/products"> <button className='btn-log'>Login</button></Link>
                 </>
             </div>
       </form>
